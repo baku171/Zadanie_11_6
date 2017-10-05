@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+    background-color: #6F83A1;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+
+button {
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    padding: 5px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #7AAECC;
+    cursor: pointer;   
+}
+
+.column-container {
+    display: flex;
+}
+.column {
+    background-color: #D6D8DA;
+    float: left;
+    margin: 5px 10px;
+    padding: 10px;
+    width: 33.33%;
+    border-radius: 20px 0 20px 0;
+}
+.column-title {
+    text-align: center;
+}
+.column-delete {
+    float: right;
+}
+.add-card {
+    float: left;
+}
+ ul {
+     list-style-type: none;
+ }
+ .column-card-list {
+    min-height: 200px;
+    transition: .2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    cursor: move;
+}
+.card .btn-delete,
+.card .card-description {
+      display: inline-block; 
+}
+.card-placeholder {
+    background: #2A4457;
+    height: 40px;
+    width: 100%; 
+}

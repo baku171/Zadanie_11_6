@@ -23,7 +23,7 @@ $(function(){
             var $column = $('<div>').addClass('column');
             var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
             var $columnCardList = $('<ul>').addClass('column-card-list');
-            var $columnDelete = $('<button>').addClass('btn-delete').text('x');
+            var $columnDelete = $('<button>').addClass('btn-delete column-delete').text('x');
             var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');
 
             // Delete column
@@ -38,8 +38,8 @@ $(function(){
             });
             
             // Add column elements
-            $column.append($columnTitle)
-                    .append($columnDelete)
+            $column.append($columnDelete)
+                    .append($columnTitle)
                     .append($columnAddCard)
                     .append($columnCardList);
             return $column;
