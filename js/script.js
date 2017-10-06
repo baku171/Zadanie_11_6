@@ -33,8 +33,7 @@ $(function(){
 
             // Add card
             $columnAddCard.click(function() {
-                self.addCard(new Card(prompt("Enter card name")));
-                
+                self.addCard(new Card(prompt("Enter card name","Nowa karta")));
             });
             
             // Add column elements
@@ -70,6 +69,9 @@ $(function(){
             var $card = $('<li>').addClass('card');
             var $cardDescription = $('<p>').addClass('card-description').text(self.description);
             var $cardDelete = $('<button>').addClass('btn-delete').text('x');
+            if (self.description === null) {
+                return;
+            };
 
             // Delete card
             $cardDelete.click(function() {
@@ -109,7 +111,10 @@ $(function(){
     }
     // Add column button
     $('.create-column').click(function() {
-        var name = prompt('Enter column name');
+        var name = prompt('Enter column name',"Nowa kolumna");
+        if (name === null) {
+            return;
+        };
         var column = new Column(name);
         board.addColumn(column);
     });
