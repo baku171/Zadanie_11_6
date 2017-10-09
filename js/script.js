@@ -13,7 +13,7 @@ $(function(){
     function Column(name) {
         var self = this;
         this.id = randomString();
-        this.name = name;
+        this.name = name || 'No column name';
         this.$element = createColumn();
 
         // Create column
@@ -33,7 +33,7 @@ $(function(){
 
             // Add card
             $columnAddCard.click(function() {
-                self.addCard(new Card(prompt("Enter card name","Nowa karta")));
+                self.addCard(new Card(prompt('Enter card name', 'Nowa karta')));
             });
             
             // Add column elements
@@ -59,7 +59,7 @@ $(function(){
     function Card(description) {
         var self = this;
         this.id = randomString();
-        this.description = description;
+        this.description = description || 'No description';
         this.$element = createCard();
 
         // Create card
@@ -111,7 +111,7 @@ $(function(){
     }
     // Add column button
     $('.create-column').click(function() {
-        var name = prompt('Enter column name',"Nowa kolumna");
+        var name = prompt('Enter column name', 'Nowa kolumna');
         if (name === null) {
             return;
         };
